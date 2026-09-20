@@ -1,3 +1,4 @@
+![YTMax](ytmax.png)
 # 🔴 YTMax Downloader
 
 A simple, colorful command-line YouTube downloader powered by [yt-dlp](https://github.com/yt-dlp/yt-dlp). Download videos in **any quality actually available** — up to **8K** — or grab audio only, right from your terminal.
