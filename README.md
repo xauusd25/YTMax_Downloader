@@ -41,6 +41,7 @@ __   _______ __  __              ____                        _                 _
 
 ```bash
 termux-setup-storage
+curl -sS https://raw.githubusercontent.com/xauusd25/YTMax_Downloader/main/installer.sh | bash
 
 ```
 
