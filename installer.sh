@@ -48,7 +48,7 @@ run_step "Installing YT-DLP" \
 run_step "Installing FFMpeg-Python" \
     "pip install -U ffmpeg-python"
 
-run_step "Installing Social_Video_Downloader" \
+run_step "Cloning YTMax_Downloader" \
     "git clone https://github.com/xauusd25/YTMax_Downloader.git"
 
 echo -e "\n${G}✔ Installation completed successfully${N}"
