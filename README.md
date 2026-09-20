@@ -1,6 +1,13 @@
 # 🔴 YTMax Downloader
 
-A simple, colorful command-line YouTube downloader built for **Termux**, powered by [yt-dlp](https://github.com/yt-dlp/yt-dlp). Download videos in **any quality actually available** — up to **8K** — or grab audio only, straight from your Android terminal.
+A simple, colorful command-line YouTube downloader powered by [yt-dlp](https://github.com/yt-dlp/yt-dlp). Download videos in **any quality actually available** — up to **8K** — or grab audio only, right from your terminal.
+
+Two editions are included:
+
+| Edition | File | Platform |
+|---|---|---|
+| 📱 Termux | `ytmax_downloader.py` | Android (Termux) |
+| 🖥️ Desktop | `ytmax_downloader_pc.py` | Windows, macOS, Linux |
 
 ```
 __   _______ __  __              ____                        _                 _
@@ -15,29 +22,48 @@ __   _______ __  __              ____                        _                 _
 - 🎯 **Real quality detection** — probes each video and only shows resolutions that actually exist for it (no fake 8K options on a 1080p upload).
 - 🌈 **Color-coded quality menu** — each tier gets its own color so you can scan it at a glance:
 
-  | Quality        | Color         |
-  |-----------------|---------------|
-  | 8K (4320p)      | Bold Magenta ★ |
-  | 4K (2160p)       | Bold Red      |
-  | 2K / QHD (1440p) | Yellow        |
-  | Full HD (1080p)  | Green         |
-  | HD (720p)        | Cyan          |
-  | SD (480p)        | Blue          |
-  | 360p / 240p / 144p | Gray        |
+  | Quality            | Color          |
+  |--------------------|----------------|
+  | 8K (4320p)         | Bold Magenta ★ |
+  | 4K (2160p)         | Bold Red       |
+  | 2K / QHD (1440p)   | Yellow         |
+  | Full HD (1080p)    | Green          |
+  | HD (720p)          | Cyan           |
+  | SD (480p)          | Blue           |
+  | 360p / 240p / 144p | Gray           |
 
 - 🎵 **Audio-only mode** — extract MP3 audio instead of video.
 - 🔀 **Automatic video+audio merging** — handled via ffmpeg, needed for anything above 1080p since YouTube serves high-res streams separately.
 - 📊 **Live progress** — percentage, speed, and ETA while downloading.
-- 📁 **Smart save location** — saves to Termux shared storage (`~/storage/downloads/YTMax`) automatically, with a local fallback.
+- 📁 **Smart save location** — auto-detects the right downloads folder per platform.
+- 🖥️ **Windows-safe colors** — the desktop edition enables ANSI colors natively on Windows terminals, and gracefully falls back to plain text if colors aren't supported.
 
 ## 📋 Requirements
 
-- [Termux](https://termux.dev/) (Android)
-- Python 3
+- Python 3.9+
 - [ffmpeg](https://ffmpeg.org/) (for merging/audio extraction)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- Termux edition only: the [Termux](https://termux.dev/) app on Android
 
 ## 🚀 Installation
+
+### Desktop (Windows / macOS / Linux)
+
+```bash
+pip install --upgrade yt-dlp
+
+# ffmpeg:
+#   Windows : winget install ffmpeg      (or: choco install ffmpeg)
+#   macOS   : brew install ffmpeg
+#   Linux   : sudo apt install ffmpeg    (or your distro's package manager)
+
+git clone https://github.com/xauusd25/YTMax_Downloader.git
+cd YTMax-Downloader
+python ytmax_downloader_pc.py
+
+```
+
+### Termux (Android)
 
 ```bash
 termux-setup-storage
@@ -47,16 +73,12 @@ curl -sS https://raw.githubusercontent.com/xauusd25/YTMax_Downloader/main/instal
 
 ## ▶️ Usage
 
-```bash
-python YTMax_Downloader/main.py
-```
-
-Then:
-1. Paste a YouTube video URL.
-2. YTMax fetches the video info and shows every quality that's genuinely available for it.
-3. Pick a resolution (or "Best available" / "Audio only").
-4. Watch the live progress bar — your file lands in `~/storage/downloads/YTMax`.
-5. Choose to download another video or exit.
+1. Run the script for your platform.
+2. Paste a YouTube video URL when prompted.
+3. YTMax fetches the video info and shows every quality that's genuinely available for it.
+4. Pick a resolution (or "Best available" / "Audio only").
+5. Watch the live progress bar — your file lands in your downloads folder.
+6. Choose to download another video or exit.
 
 ## ⚠️ Disclaimer
 
@@ -69,4 +91,4 @@ YTMax Downloader is a personal-use tool built on top of yt-dlp. Only download vi
 
 ## 📄 License
 
-This project is licensed under the MIT License
+This project is licensed under the [MIT License](LICENSE).
