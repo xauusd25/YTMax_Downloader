@@ -59,7 +59,7 @@ pip install --upgrade yt-dlp
 #   Linux   : sudo apt install ffmpeg    (or your distro's package manager)
 
 git clone https://github.com/xauusd25/YTMax_Downloader.git
-cd YTMax-Downloader
+cd YTMax_Downloader
 python ytmax_downloader_pc.py
 
 ```
