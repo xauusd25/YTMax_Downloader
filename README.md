@@ -60,7 +60,7 @@ pip install --upgrade yt-dlp
 
 git clone https://github.com/xauusd25/YTMax_Downloader.git
 cd YTMax_Downloader
-python ytmax_downloader_pc.py
+python main_pc.py
 
 ```
 
