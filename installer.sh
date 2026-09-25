@@ -52,4 +52,4 @@ run_step "Cloning YTMax_Downloader" \
     "git clone https://github.com/xauusd25/YTMax_Downloader.git"
 
 echo -e "\n${G}✔ Installation completed successfully${N}"
-echo -e "\nRun command: ${G} python YTMax_Downloader/ytmax_downloader.py${N}\n"
+echo -e "\nRun command: ${G} python YTMax_Downloader/main.py${N}\n"
