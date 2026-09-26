@@ -7,8 +7,8 @@ Two editions are included:
 
 | Edition | File | Platform |
 |---|---|---|
-| 📱 Termux | `ytmax_downloader.py` | Android (Termux) |
-| 🖥️ Desktop | `ytmax_downloader_pc.py` | Windows, macOS, Linux |
+| 📱 Termux | `main.py` | Android (Termux) |
+| 🖥️ Desktop | `main_pc.py` | Windows, macOS, Linux |
 
 ```
 __   _______ __  __              ____                        _                 _
